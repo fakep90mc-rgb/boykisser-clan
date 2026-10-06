@@ -1,0 +1,23 @@
+name: Meow
+version: 1.0.0
+main: dev.boykisser.meow.MeowPlugin
+api-version: '1.21'
+description: Create, delete and list custom teleport commands in-game.
+author: ANON
+
+commands:
+  meow:
+    description: Manage custom commands
+    usage: |
+      /meow create <name> - save your position as /<name>
+      /meow delete <name>  - delete /<name>
+      /meow list           - list all created commands
+    permission: meow.admin
+
+permissions:
+  meow.admin:
+    description: Allows creating, deleting and listing custom commands
+    default: op
+  meow.use:
+    description: "Base permission to use created commands (per-command node: meow.use.<name>)"
+    default: true
